@@ -1,0 +1,65 @@
+﻿[
+  {
+    "Website Configuration Name": "HP_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Does Website Require Input Values? (Yes/ No)": "No",
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Default Website Configuration": {
+      "Website Name Prefix": "HP_",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "SingleURL",
+      "Website URL": "https://store.hp.com/us/en/slp/weekly-deals/top-deals?jumpid=ps_gen_nc_ns&utm_medium=ps&utm_source=ga&utm_campaign=Core-Brand_Brand_OPEX_Search_Exact_CORE&utm_term=hp&matchtype=e&adid=211721953151&addisttype=g&gclid=Cj0KCQjwpLfzBRCRARIsAHuj6qU_QUdh-rY64qw4aZh4kICIr9btlWrni_lb9D5NYKMRukThZAUU14caAvUJEALw_wcB&gclsrc=aw.ds"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "products-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "product-card"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "product-title"
+      },
+      {
+        "Target Name": "SKU",
+        "Element Type": "class",
+        "Element Identifier": "product-sku"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='strike-price']"
+      },
+      {
+        "Target Name": "OfferPrice",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='sale-price ']"
+      },
+      {
+        "Target Name": "Specs",
+        "Element Type": "class",
+        "Element Identifier": "ksps"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "pdp-link",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging",
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 1,
+
+    "Should send mail attached with output file ? (Yes/ No)": "No",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

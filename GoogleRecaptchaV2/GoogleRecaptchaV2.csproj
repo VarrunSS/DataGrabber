@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="NAudio" Version="1.10.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="81.0.4044.6900" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataGrabberV2.LogWriter\DataGrabberV2.LogWriter.csproj" />
+    <ProjectReference Include="..\DataGrabberV2.Utility\DataGrabberV2.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Speech">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Speech.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

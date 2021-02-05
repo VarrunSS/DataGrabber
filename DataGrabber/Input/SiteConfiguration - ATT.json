@@ -1,0 +1,66 @@
+﻿[
+  {
+    "Website Configuration Name": "ATT_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Does Website Require Input Values? (Yes/ No)": "No",
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Default Website Configuration": {
+      "Website Name Prefix": "ATT_Accessories_",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "SingleURL",
+      "Website URL": "https://www.att.com/buy/accessories/"
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "No",
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "_jV-hK"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "_2wcjP"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "Label__hidden-spoken"
+      },
+      {
+        "Target Name": "Company",
+        "Element Type": "class",
+        "Element Identifier": "ProductCard__type-xs-fixed"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": "ProductCard__initialPriceTypeFixed"
+      },
+      {
+        "Target Name": "OfferPrice",
+        "Element Type": "class",
+        "Element Identifier": "ProductCard__priceTypeFixed"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "_1IC_X",
+        "Attribute Name (src / href / data-)": "href"
+      }
+
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnShowMore",
+    "Load More Button": {
+      "Element Type": "class",
+      "Element Identifier": "_2qJji"
+    },
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 1,
+
+    "Should send mail attached with output file ? (Yes/ No)": "No",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

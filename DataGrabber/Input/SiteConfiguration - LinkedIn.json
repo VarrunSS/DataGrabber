@@ -1,0 +1,331 @@
+﻿[
+  {
+    "Website Configuration Name": "LinkedIn_Config",
+    "Waiting Time After Page Load (in seconds)": 0,
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Default Website Configuration": {
+      "Website Name Prefix": "LinkedIn_Profile_",
+      "Website URL": "https://cse.google.com/cse?cx=012528087047286219532:qnvdrndgh1b",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "search-box",
+      "Input Values": [
+        "allintitle: Karen ^ Up Time Technology ",
+        "allintitle: Veeam ^ Merit Consulting ",
+        "allintitle: Ana ^ CVM TECHNOLOGY ",
+        "allintitle: KO ^ Pcs Medical Solutions ",
+        "allintitle: Al ^ HELWICK PRO AUDIO",
+        "allintitle: Jolly ^ Pro It ",
+        "allintitle: Curtice ^ CENTENNIAL SECURITY INTEGRATION",
+        "allintitle: Pablo ^ ICT INTERNATIONAL ",
+        "allintitle: Felicia ^ G AND H SYSTEMS GENERAL CONTRACTORS",
+        "allintitle: Vickie ^ Tier 1 Technologies ",
+        "allintitle: Shirley ^ Accountant's ",
+        "allintitle: Yobani ^ Alder Technology ",
+        "allintitle: Britney ^ COMPSOURCE",
+        "allintitle: Roseanne ^ NICKIMICKI ELECTRONICS LTD",
+        "allintitle: Amber ^ CHANNEL PARTNER GROUP",
+        "allintitle: Mariano/Liza ^ BARNES WENTWORTH",
+        "allintitle: Elva ^ Sensorium Avr ",
+        "allintitle: Mark ^ J & S SATELLITE AND HOME THEAT",
+        "allintitle: Lynn ^ TPS3 ",
+        "allintitle: Gonzalo Jimenez ^ Cloud Grid Networks ",
+        "allintitle: Nathan Eisner ^ MIMSWASOPHICITYATION",
+        "allintitle: Derrick Morse ^ Pine Cove Consulting ",
+        "allintitle: Cindy Manke ^ Practical Computers ",
+        "allintitle: Brain Matson ^ INTEGRITY HOME INTEGRATION ",
+        "allintitle: Kartik Mehta ^ Infosys International ",
+        "allintitle: Kathy Decker ^ HEWLETT PACKARD ENTERPRISE COMPANY",
+        "allintitle: Andy Knezevich ^ Axiom Technology Solutions",
+        "allintitle: Brandon Carmody ^ Blue K Development ",
+        "allintitle: Jill Feagans ^ Optum Government Solutions ",
+        "allintitle: Dyanna Tropea ^ Paradigm Computer Consulting ",
+        "allintitle: Casey Galeza ^ Network Task Group",
+        "allintitle: Dan Pelletier ^ MainStay Technologies ",
+        "allintitle: Rich Gardiner ^ EDGE TECHNOLOGY GROUP",
+        "allintitle: Brad Livingston ^ Fotis Networks ",
+        "allintitle: Justin Gonzales ^ J & N Computer Services ",
+        "allintitle: Thabang Lesotho ^ Netsurit ",
+        "allintitle: John Kolb ^ CSC Holdings ",
+        "allintitle: Kaeleigh Frank ^ Decian ",
+        "allintitle: Meredith Maynard ^ Veristor Systems orporated",
+        "allintitle: Brian Shealy ^ Economy Furniture Company ",
+        "allintitle: George Shields ^ Cable Direct Systems ",
+        "allintitle: Adnan Cartwright ^ Integrity Solutions Aid",
+        "allintitle: Robert Garces ^ Health Informatic Technologies of Florida ",
+        "allintitle: Claude Berthoin ^ Denterprise International ",
+        "allintitle: Kathy Gillette ^ South Central Communications ",
+        "allintitle: Angie Griffis ^ Eupora Furniture Company ",
+        "allintitle: Larry Rhodes ^ GE Williams Furniture Company",
+        "allintitle: Brian Villanueva ^ Music & Sound Services ",
+        "allintitle: Doug Stapleton ^ Sunset Marketing ",
+        "allintitle: Scott Spieler ^ Connectwise It ",
+        "allintitle: Joseph Waksler ^ Mortons Associates ",
+        "allintitle: Stefan Salzbrunn ^ Interlake ",
+        "allintitle: Robin Hooper ^ Horizon Business Services ",
+        "allintitle: Michael Brabham ^ Integrated Network Solutions ",
+        "allintitle: Nick Supuran ^ Romeo Hdtv ",
+        "allintitle: Jordana Saud ^ Prototype PC ",
+        "allintitle: Doris Altstatt ^ Motion Industries ",
+        "allintitle: David Watson ^ Tecinfo ",
+        "allintitle: Richard Skinner ^ Mobile Computer Services",
+        "allintitle: Rachelle Winston ^ Florida Marketing and Brokerage ",
+        "allintitle: Ben Griffeth ^ Compusafe Consulting ",
+        "allintitle: Steven Ward ^ Elliott Logic ",
+        "allintitle: Cliff Huxster ^ Immedion ",
+        "allintitle: Greg Dean ^ Information Technology Management ",
+        "allintitle: Randal Wheeler ^ Harris ",
+        "allintitle: Vince Pace ^ K2 Technology ",
+        "allintitle: Jeffrey Drill ^ Cri Solutions ",
+        "allintitle: Arthur Miney ^ Shaffer Solutions ",
+        "allintitle: Philip Reece ^ E T C Home Entertainment Systems ",
+        "allintitle: Jason Bradley ^ Five Iron Technologies ",
+        "allintitle: James Brandli ^ Bay Entertainment Systems",
+        "allintitle: Renaldo Van Staden ^ OCEAN AV IT ",
+        "allintitle: Anthony Fotopoulos ^ Nfw Trading of Tampa Bay ",
+        "allintitle: Mark Reynolds ^ Herald Office Supply ",
+        "allintitle: Jeff Ortega ^ Secure Data Center ",
+        "allintitle: Kareem Barakat ^ Mr Everything",
+        "allintitle: Eldon New ^ Share One ",
+        "allintitle: William Lynch ^ Asset Technology Group ",
+        "allintitle: Anthony Monfredo ^ It Direct ",
+        "allintitle: Kayla Duffer ^ Integrated Technology Group ",
+        "allintitle: Kristin Comeau ^ Portable Technology Solutions ",
+        "allintitle: David Gavin ^ Vcentrix ",
+        "allintitle: Gary Buealmont ^ Competitive Computers ",
+        "allintitle: Matthew Cathler ^ Stage 2 Networks ",
+        "allintitle: John Minder ^ Advanced Security Technologies ",
+        "allintitle: Devon Klooster ^ OPEN APPROACH ",
+        "allintitle: Accounts Receivable ^ Rq Partners ",
+        "allintitle: Josh Hurwitz ^ Information Technology Group Ct ",
+        "allintitle: Cinda Clark ^ Versatile Communications ",
+        "allintitle: Bill Burke Sr ^ Burke Associates It Consulting ",
+        "allintitle: Ivelize Garcia ^ Vierge Group ",
+        "allintitle: Marci Berman ^ Interlink Communication Systems ",
+        "allintitle: Liz Burleson ^ Metrix Solutions ",
+        "allintitle: Brandon Moncayo ^ Redd E-Systems ",
+        "allintitle: Paul Robinson ^ Presidio Networked Solutions ",
+        "allintitle: Hayden Garza ^ Atlanta Network Technologies",
+        "allintitle: Lori Whitt ^ Inception Network Strategies ",
+        "allintitle: Marshall Mims ^ G T Key Company ",
+        "allintitle: Sam McKenna ^ Surgical Solutions ",
+        "allintitle: Andrea Munoz ^ SPEEDCAST COMMUNICATIONS "
+      ],
+      "Input Info": [
+        {
+          "Target Name": "search-box",
+          "Target Type": "input",
+          "Element Type": "id",
+          "Element Identifier": "gsc-i-id1",
+          "Value": "",
+          "Waiting Time After Element Change (in seconds)": 1
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-search-button gsc-search-button-v2"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-results gsc-webResult"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-webResult gsc-result"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Dummy",
+        "Element Type": "id",
+        "Element Identifier": "cse-footer",
+        "Should Check Element In Body? (Yes/ No)": "Yes",
+        "Remove Text": "©&nbsp;2019&nbsp;Google"
+      },
+      {
+        "Target Name": "Title",
+        "Element Type": "xpath",
+        "Element Identifier": "//a[@class='gs-title']"
+      },
+      {
+        "Target Name": "Role",
+        "Element Type": "class",
+        "Element Identifier": "gsc-role"
+      },
+      {
+        "Target Name": "Org",
+        "Element Type": "class",
+        "Element Identifier": "gsc-org"
+      },
+      {
+        "Target Name": "ProfileURL",
+        "Element Type": "xpath",
+        "Element Identifier": "//a[@class='gs-title']",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging",
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  },
+
+
+  {
+    "Website Configuration Name": "LinkedIn_Config",
+    "Waiting Time After Page Load (in seconds)": 0,
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Default Website Configuration": {
+      "Website Name Prefix": "LinkedIn_Profile_",
+      "Website URL": "https://cse.google.com/cse?cx=012528087047286219532:qnvdrndgh1b",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "search-box",
+      "Input Values": [
+        "allintitle: Merit Consulting ",
+        "allintitle: Pcs Medical Solutions ",
+        "allintitle: HELWICK PRO AUDIO",
+        "allintitle: HEWLETT PACKARD ENTERPRISE COMPANY",
+        "allintitle: Blue K Development ",
+        "allintitle: Optum Government Solutions ",
+        "allintitle: Paradigm Computer Consulting ",
+        "allintitle: Netsurit ",
+        "allintitle: CSC Holdings ",
+        "allintitle: Decian ",
+        "allintitle: Veristor Systems orporated",
+        "allintitle: Economy Furniture Company ",
+        "allintitle: COMPSOURCE",
+        "allintitle: NICKIMICKI ELECTRONICS LTD",
+        "allintitle: CHANNEL PARTNER GROUP",
+        "allintitle: Network Task Group",
+        "allintitle: MainStay Technologies ",
+        "allintitle: EDGE TECHNOLOGY GROUP",
+        "allintitle: Fotis Networks ",
+        "allintitle: J & N Computer Services ",
+        "allintitle: Mortons Associates ",
+        "allintitle: Integrated Network Solutions ",
+        "allintitle: Romeo Hdtv ",
+        "allintitle: ICT INTERNATIONAL ",
+        "allintitle: G AND H SYSTEMS GENERAL CONTRACTORS",
+        "allintitle: Tier 1 Technologies ",
+        "allintitle: Cable Direct Systems ",
+        "allintitle: Integrity Solutions Aid",
+        "allintitle: Health Informatic Technologies of Florida ",
+        "allintitle: Denterprise International ",
+        "allintitle: South Central Communications ",
+        "allintitle: BARNES WENTWORTH",
+        "allintitle: Sensorium Avr ",
+        "allintitle: J & S SATELLITE AND HOME THEAT",
+        "allintitle: Cloud Grid Networks ",
+        "allintitle: Eupora Furniture Company ",
+        "allintitle: GE Williams Furniture Company",
+        "allintitle: Music & Sound Services ",
+        "allintitle: Connectwise It ",
+        "allintitle: MIMSWASOPHICITYATION",
+        "allintitle: INTEGRITY HOME INTEGRATION ",
+        "allintitle: Prototype PC ",
+        "allintitle: Motion Industries ",
+        "allintitle: Tecinfo ",
+        "allintitle: Mobile Computer Services",
+        "allintitle: Florida Marketing and Brokerage ",
+        "allintitle: Bay Entertainment Systems",
+        "allintitle: OCEAN AV IT ",
+        "allintitle: Nfw Trading of Tampa Bay ",
+        "allintitle: Herald Office Supply ",
+        "allintitle: Secure Data Center ",
+        "allintitle: K2 Technology ",
+        "allintitle: Cri Solutions ",
+        "allintitle: Shaffer Solutions ",
+        "allintitle: E T C Home Entertainment Systems ",
+        "allintitle: Five Iron Technologies ",
+        "allintitle: Mr Everything",
+        "allintitle: Asset Technology Group ",
+        "allintitle: Compusafe Consulting ",
+        "allintitle: Immedion ",
+        "allintitle: Rq Partners ",
+        "allintitle: Information Technology Group Ct ",
+        "allintitle: Versatile Communications ",
+        "allintitle: Burke Associates It Consulting ",
+        "allintitle: Vcentrix ",
+        "allintitle: Competitive Computers ",
+        "allintitle: Stage 2 Networks ",
+        "allintitle: Advanced Security Technologies ",
+        "allintitle: Vierge Group ",
+        "allintitle: Interlink Communication Systems ",
+        "allintitle: Metrix Solutions ",
+        "allintitle: Redd E-Systems ",
+        "allintitle: Presidio Networked Solutions ",
+        "allintitle: Atlanta Network Technologies",
+        "allintitle: G T Key Company ",
+        "allintitle: Surgical Solutions ",
+        "allintitle: SPEEDCAST COMMUNICATIONS "
+      ],
+      "Input Info": [
+        {
+          "Target Name": "search-box",
+          "Target Type": "input",
+          "Element Type": "id",
+          "Element Identifier": "gsc-i-id1",
+          "Value": "",
+          "Waiting Time After Element Change (in seconds)": 1
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-search-button gsc-search-button-v2"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-results gsc-webResult"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "gsc-webResult gsc-result"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Dummy",
+        "Element Type": "id",
+        "Element Identifier": "cse-footer",
+        "Should Check Element In Body? (Yes/ No)": "Yes",
+        "Remove Text": "©&nbsp;2019&nbsp;Google"
+      },
+      {
+        "Target Name": "Title",
+        "Element Type": "xpath",
+        "Element Identifier": "//a[@class='gs-title']"
+      },
+      {
+        "Target Name": "Role",
+        "Element Type": "class",
+        "Element Identifier": "gsc-role"
+      },
+      {
+        "Target Name": "Org",
+        "Element Type": "class",
+        "Element Identifier": "gsc-org"
+      },
+      {
+        "Target Name": "ProfileURL",
+        "Element Type": "xpath",
+        "Element Identifier": "//a[@class='gs-title']",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging",
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

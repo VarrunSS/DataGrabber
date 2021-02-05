@@ -1,0 +1,152 @@
+﻿[
+  {
+    "Website Configuration Name": "AmazonResellerConfig",
+    "Waiting Time After Page Load (in seconds)": 3,
+    "Default Website Configuration": {
+      "Website Name Prefix": "AmazonReseller_",
+      "Website URL": "https://www.google.com/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.amazon.com/dp/B015PRO512",
+        "https://www.amazon.com/dp/B01HL8LXQ8",
+        "https://www.amazon.com/dp/B07T6C51YH",
+        "https://www.amazon.com/dp/B00OJZUQ24",
+        "https://www.amazon.com/dp/B00OJZVBXC",
+        "https://www.amazon.com/dp/B00EWCUK1Q",
+        "https://www.amazon.com/dp/B018XX8K66",
+        "https://www.amazon.com/dp/B074XLMYY5",
+        "https://www.amazon.com/dp/B07NJPXRBC",
+        "https://www.amazon.com/dp/B015PRCBBI",
+        "https://www.amazon.com/dp/B07NJQFL4X",
+        "https://www.amazon.com/dp/B07J3DB57C",
+        "https://www.amazon.com/dp/B074XN1LH3",
+        "https://www.amazon.com/dp/B00EWCUK98",
+        "https://www.amazon.com/dp/B01N15FSAG",
+        "https://www.amazon.com/dp/B07SXMZLP9",
+        "https://www.amazon.com/dp/B014LFINIA",
+        "https://www.amazon.com/dp/B07SXMZLPK",
+        "https://www.amazon.com/dp/B01LZZ6DQ9",
+        "https://www.amazon.com/dp/B015PR20GY",
+        "https://www.amazon.com/dp/B07D4734HR",
+        "https://www.amazon.com/dp/B07HLLC1TC",
+        "https://www.amazon.com/dp/B01N5QOK0K",
+        "https://www.amazon.com/dp/B07GX69JQP"
+      ]
+    },
+    "Products List": {
+      "Element Type": "tagname",
+      "Element Identifier": "body"
+    },
+    "Product": {
+      "Element Type": "id",
+      "Element Identifier": "dp-container"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "ASIN",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'asin')]//following-sibling::*"
+      },
+      {
+        "Target Name": "Product Title",
+        "Element Type": "id",
+        "Element Identifier": "#productTitle"
+      },
+      {
+        "Target Name": "Buy Box Winner",
+        "Element Type": "id",
+        "Element Identifier": "#sellerProfileTriggerId"
+      },
+      {
+        "Target Name": "Price",
+        "Element Type": "id",
+        "Element Identifier": "#priceblock_ourprice"
+      },
+      {
+        "Target Name": "Shipping Cost",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@id='ourprice_shippingmessage']//b"
+      },
+      {
+        "Target Name": "Resellers URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@id='mbc-upd-olp-link']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging",
+    "Should Fetch Data from Details Page? (Yes/ No)": "No",
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Resellers URL"
+      },
+      "Specify the Sheet Number in which Output data should be written": 2,
+      "Waiting Time After Page Load (in seconds)": 3,
+      "Default Website Configuration": {
+        "Website Name Prefix": "AmazonReseller_",
+        "Website URL": "https://amazon.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs"
+      },
+      "Products List": {
+        "Element Type": "id",
+        "Element Identifier": "olpOfferList"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "a-row a-spacing-mini olpOffer"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "ASIN",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[contains(@name, 'metric-asin')]",
+          "Attribute Name (src / href / data-)": "name",
+          "Remove Text": "metric-asin."
+        },
+        {
+          "Target Name": "Seller Information",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'a-spacing-none olpSellerName')]"
+        },
+        {
+          "Target Name": "Price",
+          "Element Type": "class",
+          "Element Identifier": ".olpOfferPrice"
+        },
+        {
+          "Target Name": "Shipping Cost",
+          "Element Type": "class",
+          "Element Identifier": "olpShippingInfo",
+          "Remove Text": "Details"
+        },
+        {
+          "Target Name": "Condition",
+          "Element Type": "class",
+          "Element Identifier": ".olpCondition"
+        },
+        {
+          "Target Name": "Is Amazon ?",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'a-spacing-none olpSellerName')]//img",
+          "Attribute Name (src / href / data-)": "alt"
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+      "Pagination Container": {
+        "Element Type": "class",
+        "Element Identifier": ".a-pagination"
+      },
+      "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+      "Next Button in Pagination": {
+        "Element Type": "xpath",
+        "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'a-last', ' ' ))]//a"
+      },
+      "Active Class for current page in Pagination": "a-selected",
+      "Disabled Class for last page in Pagination": "a-disabled",
+      "Should Limit Paging? (Yes/ No)": "No",
+      "Paging Limit": 1
+    }
+  }
+]

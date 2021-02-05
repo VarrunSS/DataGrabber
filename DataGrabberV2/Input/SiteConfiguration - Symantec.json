@@ -1,0 +1,811 @@
+﻿[
+  {
+    "Website Configuration Name": "SymantecPartnerConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SymantecPartners_Canada_",
+      "Website URL": "https://mysymantec.force.com/partnerlocator/s/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "partner-type-dropdown",
+      "Input Values": [
+        "Resells Symantec software and hardware solutions",
+        "Offers Symantec enterprise product technical support",
+        "Provides managed or subscription services for Symantec products",
+        "Provides Global delivery and implementation services to large enterprises",
+        "Develops integrations and certifies solutions with Symantec products",
+        "Distributes Symantec software and hardware solutions to resellers",
+        "Offers Symantec Cloud Solutions on their Marketplace"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "partner-type-dropdown",
+          "Target Type": "custom-dropdown",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element cPCMySymcLocatorPicklist']//input",
+          "Value": "",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "tagname",
+            "Element Identifier": "lightning-base-combobox-item",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        },
+        {
+          "Target Name": "location-textbox",
+          "Target Type": "auto-suggest",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//*[@class='slds-lookup__search-input slds-input']",
+          "Value": "Canada",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//ul/li",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "slds-button slds-button_neutral slds-float_right locator-searchbtn slds-p-bottom_x-large"
+    },
+    "Does it have 'Reset Search' button to get results? (Yes/ No)": "Yes",
+    "Reset Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='locator-btn' and contains(text(), 'Open Search Options')]"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "slds-m-vertical_large slds-p-top--medium cPCMySymcLocatorFiltersSection"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "slds-box slds-p-vertical_large cPCMySymcLocatorTable"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "slds-p-left_medium slds-p-right_xx-large"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[1]"
+      },
+      {
+        "Target Name": "City & State",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dd[1]"
+      },
+      {
+        "Target Name": "Country & Pin code",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[2]"
+      },
+      {
+        "Target Name": "Partner Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl//a"
+      },
+      {
+        "Target Name": "Program Level",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, '.svg')]",
+        "Attribute Name (src / href / data-)": "alt"
+      },
+      {
+        "Target Name": "Has Secure One Services?",
+        "Element Type": "xpath",
+        "Element Identifier": "//li[contains(text(), 'Secure One Services')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Has Locator Knights?",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, 'Locator_Knights_Logo')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Partner Locator URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='slds-p-left_medium slds-p-right_xx-large']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='page-item' and contains(text(), 'Next Page')]"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Partner Locator URL"
+      },
+      "Website Configuration Name": "SymantecPartnerConfig",
+      "Waiting Time After Page Load (in seconds)": 5,
+      "Default Website Configuration": {
+        "Website Name Prefix": "SymantecPartners_",
+        "Website URL": "https://google.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+        "Specify the Sheet Number in which Output data should be written": 2
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "contentRegion"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Phone Number",
+          "Element Type": "class",
+          "Element Identifier": "detail_page_3 slds-p-bottom_medium",
+          "Remove Text": "Phone:"
+        },
+        {
+          "Target Name": "Awards",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[1]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Tech Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[2]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Sales Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[3]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  },
+  {
+    "Website Configuration Name": "SymantecPartnerConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SymantecPartners_India_",
+      "Website URL": "https://mysymantec.force.com/partnerlocator/s/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "partner-type-dropdown",
+      "Input Values": [
+        "Resells Symantec software and hardware solutions",
+        "Offers Symantec enterprise product technical support",
+        "Provides managed or subscription services for Symantec products",
+        "Provides Global delivery and implementation services to large enterprises",
+        "Develops integrations and certifies solutions with Symantec products",
+        "Distributes Symantec software and hardware solutions to resellers",
+        "Offers Symantec Cloud Solutions on their Marketplace"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "partner-type-dropdown",
+          "Target Type": "custom-dropdown",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element cPCMySymcLocatorPicklist']//input",
+          "Value": "",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "tagname",
+            "Element Identifier": "lightning-base-combobox-item",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        },
+        {
+          "Target Name": "location-textbox",
+          "Target Type": "auto-suggest",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//*[@class='slds-lookup__search-input slds-input']",
+          "Value": "India",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//ul/li",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "slds-button slds-button_neutral slds-float_right locator-searchbtn slds-p-bottom_x-large"
+    },
+    "Does it have 'Reset Search' button to get results? (Yes/ No)": "Yes",
+    "Reset Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='locator-btn' and contains(text(), 'Open Search Options')]"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "slds-m-vertical_large slds-p-top--medium cPCMySymcLocatorFiltersSection"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "slds-box slds-p-vertical_large cPCMySymcLocatorTable"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "slds-p-left_medium slds-p-right_xx-large"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[1]"
+      },
+      {
+        "Target Name": "City & State",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dd[1]"
+      },
+      {
+        "Target Name": "Country & Pin code",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[2]"
+      },
+      {
+        "Target Name": "Partner Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl//a"
+      },
+      {
+        "Target Name": "Program Level",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, '.svg')]",
+        "Attribute Name (src / href / data-)": "alt"
+      },
+      {
+        "Target Name": "Has Secure One Services?",
+        "Element Type": "xpath",
+        "Element Identifier": "//li[contains(text(), 'Secure One Services')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Has Locator Knights?",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, 'Locator_Knights_Logo')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Partner Locator URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='slds-p-left_medium slds-p-right_xx-large']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='page-item' and contains(text(), 'Next Page')]"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Partner Locator URL"
+      },
+      "Website Configuration Name": "SymantecPartnerConfig",
+      "Waiting Time After Page Load (in seconds)": 5,
+      "Default Website Configuration": {
+        "Website Name Prefix": "SymantecPartners_",
+        "Website URL": "https://google.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+        "Specify the Sheet Number in which Output data should be written": 2
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "contentRegion"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Phone Number",
+          "Element Type": "class",
+          "Element Identifier": "detail_page_3 slds-p-bottom_medium",
+          "Remove Text": "Phone:"
+        },
+        {
+          "Target Name": "Awards",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[1]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Tech Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[2]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Sales Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[3]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  },
+  {
+    "Website Configuration Name": "SymantecPartnerConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SymantecPartners_Germany_",
+      "Website URL": "https://mysymantec.force.com/partnerlocator/s/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "partner-type-dropdown",
+      "Input Values": [
+        "Resells Symantec software and hardware solutions",
+        "Offers Symantec enterprise product technical support",
+        "Provides managed or subscription services for Symantec products",
+        "Provides Global delivery and implementation services to large enterprises",
+        "Develops integrations and certifies solutions with Symantec products",
+        "Distributes Symantec software and hardware solutions to resellers",
+        "Offers Symantec Cloud Solutions on their Marketplace"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "partner-type-dropdown",
+          "Target Type": "custom-dropdown",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element cPCMySymcLocatorPicklist']//input",
+          "Value": "",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "tagname",
+            "Element Identifier": "lightning-base-combobox-item",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        },
+        {
+          "Target Name": "location-textbox",
+          "Target Type": "auto-suggest",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//*[@class='slds-lookup__search-input slds-input']",
+          "Value": "Germany",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//ul/li",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "slds-button slds-button_neutral slds-float_right locator-searchbtn slds-p-bottom_x-large"
+    },
+    "Does it have 'Reset Search' button to get results? (Yes/ No)": "Yes",
+    "Reset Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='locator-btn' and contains(text(), 'Open Search Options')]"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "slds-m-vertical_large slds-p-top--medium cPCMySymcLocatorFiltersSection"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "slds-box slds-p-vertical_large cPCMySymcLocatorTable"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "slds-p-left_medium slds-p-right_xx-large"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[1]"
+      },
+      {
+        "Target Name": "City & State",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dd[1]"
+      },
+      {
+        "Target Name": "Country & Pin code",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[2]"
+      },
+      {
+        "Target Name": "Partner Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl//a"
+      },
+      {
+        "Target Name": "Program Level",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, '.svg')]",
+        "Attribute Name (src / href / data-)": "alt"
+      },
+      {
+        "Target Name": "Has Secure One Services?",
+        "Element Type": "xpath",
+        "Element Identifier": "//li[contains(text(), 'Secure One Services')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Has Locator Knights?",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, 'Locator_Knights_Logo')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Partner Locator URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='slds-p-left_medium slds-p-right_xx-large']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='page-item' and contains(text(), 'Next Page')]"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Partner Locator URL"
+      },
+      "Website Configuration Name": "SymantecPartnerConfig",
+      "Waiting Time After Page Load (in seconds)": 5,
+      "Default Website Configuration": {
+        "Website Name Prefix": "SymantecPartners_",
+        "Website URL": "https://google.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+        "Specify the Sheet Number in which Output data should be written": 2
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "contentRegion"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Phone Number",
+          "Element Type": "class",
+          "Element Identifier": "detail_page_3 slds-p-bottom_medium",
+          "Remove Text": "Phone:"
+        },
+        {
+          "Target Name": "Awards",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[1]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Tech Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[2]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Sales Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[3]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  },
+  {
+    "Website Configuration Name": "SymantecPartnerConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SymantecPartners_UnitedStates_",
+      "Website URL": "https://mysymantec.force.com/partnerlocator/s/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "partner-type-dropdown",
+      "Input Values": [
+        "Resells Symantec software and hardware solutions",
+        "Offers Symantec enterprise product technical support",
+        "Provides managed or subscription services for Symantec products",
+        "Provides Global delivery and implementation services to large enterprises",
+        "Develops integrations and certifies solutions with Symantec products",
+        "Distributes Symantec software and hardware solutions to resellers",
+        "Offers Symantec Cloud Solutions on their Marketplace"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "partner-type-dropdown",
+          "Target Type": "custom-dropdown",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element cPCMySymcLocatorPicklist']//input",
+          "Value": "",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "tagname",
+            "Element Identifier": "lightning-base-combobox-item",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        },
+        {
+          "Target Name": "location-textbox",
+          "Target Type": "auto-suggest",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//*[@class='slds-lookup__search-input slds-input']",
+          "Value": "United States",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//ul/li",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "slds-button slds-button_neutral slds-float_right locator-searchbtn slds-p-bottom_x-large"
+    },
+    "Does it have 'Reset Search' button to get results? (Yes/ No)": "Yes",
+    "Reset Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='locator-btn' and contains(text(), 'Open Search Options')]"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "slds-m-vertical_large slds-p-top--medium cPCMySymcLocatorFiltersSection"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "slds-box slds-p-vertical_large cPCMySymcLocatorTable"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "slds-p-left_medium slds-p-right_xx-large"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[1]"
+      },
+      {
+        "Target Name": "City & State",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dd[1]"
+      },
+      {
+        "Target Name": "Country & Pin code",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl/dt[2]"
+      },
+      {
+        "Target Name": "Partner Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl//a"
+      },
+      {
+        "Target Name": "Program Level",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, '.svg')]",
+        "Attribute Name (src / href / data-)": "alt"
+      },
+      {
+        "Target Name": "Has Secure One Services?",
+        "Element Type": "xpath",
+        "Element Identifier": "//li[contains(text(), 'Secure One Services')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Has Locator Knights?",
+        "Element Type": "xpath",
+        "Element Identifier": "//img[contains(@src, 'Locator_Knights_Logo')]",
+        "Only Check if element exists? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Partner Locator URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='slds-p-left_medium slds-p-right_xx-large']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='page-item' and contains(text(), 'Next Page')]"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Partner Locator URL"
+      },
+      "Website Configuration Name": "SymantecPartnerConfig",
+      "Waiting Time After Page Load (in seconds)": 5,
+      "Default Website Configuration": {
+        "Website Name Prefix": "SymantecPartners_",
+        "Website URL": "https://google.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+        "Specify the Sheet Number in which Output data should be written": 2
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "contentRegion"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Phone Number",
+          "Element Type": "class",
+          "Element Identifier": "detail_page_3 slds-p-bottom_medium",
+          "Remove Text": "Phone:"
+        },
+        {
+          "Target Name": "Awards",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[1]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Tech Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[2]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        },
+        {
+          "Target Name": "Sales Credentials",
+          "Element Type": "xpath",
+          "Element Identifier": "(.//*[contains(@class, 'slds-p-vertical_large')])[3]",
+          "Get Child Element? (Yes/ No)": "Yes",
+          "Child Node": {
+            "Target Name": "sub-elements",
+            "Element Type": "tagname",
+            "Element Identifier": "p",
+            "Separator": "|||"
+          }
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  }
+
+]

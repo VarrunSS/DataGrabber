@@ -1,0 +1,89 @@
+﻿[
+  {
+    "Website Configuration Name": "SHI_Full_Config",
+    "Waiting Time After Page Load (in seconds)": 0,
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Default Website Configuration": {
+      "Website Name Prefix": "SHI_Hardwares_",
+      "Website URL": "https://www.google.com",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.shi.com/shop/search/hardware/audio_visual?p=1,500",
+        "https://www.shi.com/shop/search/hardware/cables?p=1,500",
+        "https://www.shi.com/shop/search/hardware/cameras-and-camcorders?p=1,500",
+        "https://www.shi.com/shop/search/hardware/computer-accessories?p=1,500"
+      ]
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "srResults"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "row srProduct"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "tagname",
+        "Element Identifier": "h2"
+      },
+      {
+        "Target Name": "Category",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@id='ctgy1hardware']/li[@class='srCat catParent-SR open'][1]/a",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Manufacture Part #",
+        "Element Type": "class",
+        "Element Identifier": "srMFR",
+        "Remove Text": "Mfr Part #:"
+      },
+      {
+        "Target Name": "SHI Part #",
+        "Element Type": "class",
+        "Element Identifier": "srPart",
+        "Remove Text": "SHI Part #:"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": "srStockMSRP"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "tagname",
+        "Element Identifier": "price-range"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "xpath",
+        "Element Identifier": "//h2/a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "col-xs-6 text-right searchPages"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='btn icon btn-primary srh_tp.nxtp']"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 2,
+
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

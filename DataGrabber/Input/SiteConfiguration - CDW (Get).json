@@ -1,0 +1,148 @@
+﻿[
+  {
+    "Website Configuration Name": "CDW_Full_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "RestClient",
+    "Default Website Configuration": {
+      "Website Name Prefix": "CDW_Full_",
+      "Website URL": "https://www.google.com",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website Pattern Configuration": {
+        "HTTP Verb": "GET",
+        "Current Page": 1,
+        "Items Per Page": 72,
+        "Start Index": 0,
+        "Pattern Settings": [
+          {
+            "Url Pattern": "https://www.cdw.com/search/Cables/?w=B&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 26496
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Computer-Accessories/?w=A&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 12096
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Computers/?w=C&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 20808
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Data-Storage-Products/?w=T&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 13968
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Electronics/?w=E&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 5904
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Memory/?w=M&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 3384
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Monitors-Projectors/?w=D&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 5976
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Networking-Products/?w=N&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 39096
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Office-Equipment-Supplies/?w=O&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 8352
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Phones-Video-Conferencing/?w=H&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 7560
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Power-Cooling-Racks/?w=W&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 12240
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Printers-Scanners-Print-Supplies/?w=P&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 17064
+          },
+          {
+            "Url Pattern": "https://www.cdw.com/search/Servers-Server-Management/?w=S&ln=3&maxrecords=72&pcurrent={CurrentPage}",
+            "Total Items": 3528
+          }
+        ]
+      }
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "search-main"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".search-result"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".search-result-product-url"
+      },
+      {
+        "Target Name": "Category",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='breadcrumbs']//li[last()]/a",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Manufacture Part #",
+        "Element Type": "class",
+        "Element Identifier": "mfg-code",
+        "Remove Text": "MFG#: "
+      },
+      {
+        "Target Name": "CDW Part #",
+        "Element Type": "class",
+        "Element Identifier": "cdw-code",
+        "Remove Text": "CDW#: "
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": "price-msrp single"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "class",
+        "Element Identifier": "price-type-price"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "search-result-product-url",
+        "Attribute Name (src / href / data-)": "href"
+      },
+      {
+        "Target Name": "TotalPages",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='search-pagination-list-container  search-pagination-header']//a[last()-1]",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "search-pagination-list-container"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='ico-chevron-right-thin']//parent::*"
+    },
+    "Active Class for current page in Pagination": "search-pagination-active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 2,
+
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

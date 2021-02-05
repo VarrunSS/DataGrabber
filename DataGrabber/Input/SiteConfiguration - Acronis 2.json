@@ -1,0 +1,108 @@
+﻿[
+  {
+    "Website Configuration Name": "Acronis_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Waiting Time After Page Load (in seconds)": 5,
+    "Default Website Configuration": {
+      "Website Name Prefix": "Acronis_partner_",
+      "Website URL": "https://www.acronis.com/en-in/partners/locator/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "country-dropdown",
+      "Input Values": [
+        "United States"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "country-dropdown",
+          "Target Type": "input",
+          "Element Type": "xpath",
+          "Element Identifier": ".//*[@class='bg-dark-blue search-section']//input",
+          "Value": ""
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "btn btn-primary w-100"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "partner-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "partner-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Partner Name",
+        "Element Type": "TagName",
+        "Element Identifier": "h3"
+      },
+      {
+        "Target Name": "Partner Type-1",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='grey-text'][1]"
+      },
+      {
+        "Target Name": "Partner type 2",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='grey-text'][2]"
+      },
+      {
+        "Target Name": "Specalization",
+        "Element Type": "xpath",
+        "Element Identifier": ""
+      },
+      {
+        "Target Name": "Address line-1",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='d-ib'][2]//div[1]"
+      },
+      {
+        "Target Name": "Address line-2",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='d-ib'][2]//div[2]"
+      },
+      {
+        "Target Name": "Zip-Code",
+        "Element Type": "class",
+        "Element Identifier": "tet"
+      },
+      {
+        "Target Name": "Telephone No",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='d-ib'][3]//div[1]",
+        "Remove Text": "Tel.: "
+      },
+      {
+        "Target Name": "URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='d-ib'][3]//div[2]/a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "filterPartners"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "No",
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Waiting Time After Page Click (in seconds)": 3,
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 1,
+
+    "Should send mail attached with output file ? (Yes/ No)": "No",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

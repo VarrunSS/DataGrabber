@@ -1,0 +1,1062 @@
+﻿[
+  {
+    "Website Configuration Name": "Amazon_Printers",
+    "Website Info": [
+      {
+        "Website Name": "Amazon_Laser_Printer",
+        "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172648&dc&fst=as%3Aoff&qid=1565351192&rnid=172635&ref=sr_pg_1"
+      },
+      {
+        "Website Name": "Amazon_Inkjet_Printer",
+        "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172646&dc&fst=as%3Aoff&qid=1565587785&rnid=172635&ref=sr_nr_n_2"
+      }
+    ],
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".a-color-base.a-text-normal"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-strike='true']/span[1]"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-color='price']/span[1]"
+      },
+      {
+        "Target Name": "Product Image",
+        "Element Type": "class",
+        "Element Identifier": ".s-image",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "a-link-normal a-text-normal",
+        "Attribute Name (src / href / data-)": "href"
+      },
+      {
+        "Target Name": "ASIN",
+        "Element Type": "xpath",
+        "Element Identifier": ".//*[data-asin]",
+        "Attribute Name (src / href / data-)": "data-asin"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".a-pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'a-last', ' ' ))]//a"
+    },
+    "Active Class for current page in Pagination": "a-selected",
+    "Disabled Class for last page in Pagination": "a-disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3
+  },
+  {
+    "Website Configuration Name": "Croma_TV",
+    "Website Info": [
+      {
+        "Website Name": "Croma_LED_Televisions",
+        "Website URL": "https://www.croma.com/televisions/led-tvs/c/392"
+      }
+    ],
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".product__list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".product__list--item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "tagname",
+        "Element Identifier": "h2"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": ".pdpPriceMrp"
+      },
+      {
+        "Target Name": "Offer Price",
+        "Element Type": "class",
+        "Element Identifier": ".pdpPrice"
+      },
+      {
+        "Target Name": "Percent OFF",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'listingDiscnt', ' ' ))]//div"
+      },
+      {
+        "Target Name": "Features",
+        "Element Type": "class",
+        "Element Identifier": ".listmian-features"
+      },
+      {
+        "Target Name": "ImageURL",
+        "Element Type": "class",
+        "Element Identifier": ".img-zoom",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "DetailsURL",
+        "Element Type": "class",
+        "Element Identifier": ".product__list--name",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'pagination-next', ' ' ))]//a"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3
+  },
+  {
+    "Website Configuration Name": "Locator",
+    "Website Info": [
+      {
+        "Website Name": "Locator_US",
+        "Website URL": "https://locator.paloaltonetworks.com/",
+        "Input Info": [
+          {
+            "Target Name": "country-dropdown",
+            "Element Type": "id",
+            "Element Identifier": "countryList",
+            "Value": "United States"
+          },
+          {
+            "Target Name": "city-textbox",
+            "Element Type": "id",
+            "Element Identifier": "txtCityStateZip",
+            "Value": "California"
+          }
+        ]
+      },
+      {
+        "Website Name": "Locator_Germany",
+        "Website URL": "https://locator.paloaltonetworks.com/",
+        "Input Info": [
+          {
+            "Target Type": "country-dropdown",
+            "Element Type": "id",
+            "Element Identifier": "countryList",
+            "Value": "Germany"
+          }
+        ]
+      }
+    ],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "id",
+      "Element Identifier": "lbSearch"
+    },
+    "Products List": {
+      "Element Type": "id",
+      "Element Identifier": "resultsCarousel"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "jcarousel-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "tagname",
+        "Element Identifier": "h3"
+      },
+      {
+        "Target Name": "AddressType",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'resultsAddress', ' ' ))]//p[(((count(preceding-sibling::*) + 1) = 1) and parent::*)]"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "tagname",
+        "Element Identifier": "address"
+      },
+      {
+        "Target Name": "Partner Level",
+        "Element Type": "xpath",
+        "Element Identifier": "//p[(((count(preceding-sibling::*) + 1) = 1) and parent::*)]//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'CategoryLabel', ' ' ))]"
+      },
+      {
+        "Target Name": "Partner Type",
+        "Element Type": "xpath",
+        "Element Identifier": "//p[(((count(preceding-sibling::*) + 1) = 2) and parent::*)]//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'CategoryLabel', ' ' ))]"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+  },
+  {
+    "Website Configuration Name": "TrendMicroConfig",
+    "Website Info": [
+      {
+        "Website Name": "TrendMicro_US",
+        "Website URL": "https://www.trendmicro.com/en_us/partners/find-a-partner.html",
+        "Input Info": [
+          {
+            "Target Name": "country-dropdown",
+            "Target Type": "select",
+            "Element Type": "xpath",
+            "Element Identifier": "//select[@name='country_id']",
+            "Value": "United States of America",
+            "Has Child?": true,
+            "Child Target Name": "city-dropdown"
+          },
+          {
+            "Target Name": "city-dropdown",
+            "Target Type": "select",
+            "Element Type": "xpath",
+            "Element Identifier": "//select[@name='city_id']",
+            "Value": "Mississippi"
+          }
+        ]
+      }
+    ],
+
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Default Website Configuration": {
+      "Website Name Prefix": "TrendMicro_",
+      "Website URL": "https://www.trendmicro.com/en_us/partners/find-a-partner.html",
+      "Input Values": [ "Germany", "Egypt" ],
+      "Input Info": [
+        {
+          "Target Name": "country-dropdown",
+          "Target Type": "select",
+          "Element Type": "xpath",
+          "Element Identifier": "//select[@name='country_id']",
+          "Value": ""
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": ".primary-red"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "reseller-results"
+    },
+    "Product": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='result-body']//tr"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='tier-contact-wrap']//h4"
+      },
+      {
+        "Target Name": "Title-Type",
+        "Element Type": "class",
+        "Element Identifier": ".tier"
+      },
+      {
+        "Target Name": "Type",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='hidden-xs'][1]"
+      },
+      {
+        "Target Name": "Contact Info",
+        "Element Type": "xpath",
+        "Element Identifier": "//td[3]"
+      },
+      {
+        "Target Name": "Company Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//td[3]/a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".results-nav"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "class",
+      "Element Identifier": ".next-button"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 2
+  },
+  {
+    "Website Configuration Name": "SymantecPartnerLocatorConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SymantecPartnerLocator_",
+      "Website URL": "https://mysymantec.force.com/partnerlocator/s/",
+      "Input Values": [ "United States" ],
+      "Input Info": [
+        {
+          "Target Name": "partner-type-dropdown",
+          "Target Type": "custom-dropdown",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element cPCMySymcLocatorPicklist']//input",
+          "Value": "Resells Symantec software and hardware solutions",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "tagname",
+            "Element Identifier": "lightning-base-combobox-item",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        },
+        {
+          "Target Name": "location-textbox",
+          "Target Type": "auto-suggest",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//*[@class='slds-lookup__search-input slds-input']",
+          "Value": "",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//*[@class='slds-form-element slds-p-top_x-large slds-p-bottom_x-large']//ul/li",
+            "Waiting Time After Element Change (in seconds)": 5
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "class",
+      "Element Identifier": "slds-button slds-button_neutral slds-float_right locator-searchbtn slds-p-bottom_x-large"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "slds-m-vertical_large slds-p-top--medium cPCMySymcLocatorFiltersSection"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "slds-box slds-p-vertical_large cPCMySymcLocatorTable"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "slds-p-left_medium slds-p-right_xx-large"
+      },
+      {
+        "Target Name": "Address",
+        "Element Type": "tagname",
+        "Element Identifier": "dl"
+      },
+      {
+        "Target Name": "Partner Website",
+        "Element Type": "xpath",
+        "Element Identifier": "//dl//a"
+      },
+      {
+        "Target Name": "Partner Locator URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='slds-p-left_medium slds-p-right_xx-large']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='page-item' and contains(text(), 'Next Page')]"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 10
+  },
+  {
+    "Website Configuration Name": "GoogleConfig",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Default Website Configuration": {
+      "Website Name Prefix": "Google_",
+      "Website URL": "https://www.google.com/",
+      "Input Values": [ "Vanitha Husband Name" ],
+      "Input Info": [
+        {
+          "Target Name": "search-textbox",
+          "Target Type": "auto-complete",
+          "Element Type": "class",
+          "Element Identifier": "gLFyf gsfi",
+          "Partner Element": {
+            "Target Name": "auto-suggestion-dropdown",
+            "Element Type": "xpath",
+            "Element Identifier": "//ul[@class='erkvQe']//li"
+          }
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='FPdoLc VlcLAe']//*[@class='gNO89b']"
+    },
+    "Products List": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='srg']"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "g"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "tagname",
+        "Element Identifier": "h3"
+      },
+      {
+        "Target Name": "Description",
+        "Element Type": "class",
+        "Element Identifier": "s"
+      },
+      {
+        "Target Name": "Search URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='r']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "id",
+      "Element Identifier": "navcnt"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "id",
+      "Element Identifier": "pnnext"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 10
+  },
+  {
+    "Website Configuration Name": "GooglePartnerConfig",
+    "Website Info": [
+      {
+        "Website Name": "GooglePartner",
+        "Website URL": "https://cloud.withgoogle.com/partners"
+      }
+    ],
+    "Does Website Require Input Values? (Yes/ No)": "No",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "cards__container"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "card"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "card__header-text h-u-font-weight-medium"
+      },
+      {
+        "Target Name": "Content",
+        "Element Type": "class",
+        "Element Identifier": "card__main"
+      },
+      {
+        "Target Name": "Partner Logo",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'card__header-logo', ' ' ))]//img",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "Partner URL",
+        "Element Type": "class",
+        "Element Identifier": "card__box",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnShowMore",
+    "Load More Button": {
+      "Element Type": "id",
+      "Element Identifier": "load-more-cards-button"
+    },
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 10
+  },
+  {
+    "Website Configuration Name": "Amazon_Printers",
+    "Website Info": [
+      {
+        "Website Name": "Amazon_Laser_Printer",
+        "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172648&dc&fst=as%3Aoff&qid=1565351192&rnid=172635&ref=sr_pg_1"
+      },
+      {
+        "Website Name": "Amazon_Inkjet_Printer",
+        "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172646&dc&fst=as%3Aoff&qid=1565587785&rnid=172635&ref=sr_nr_n_2"
+      }
+    ],
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".a-color-base.a-text-normal"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-strike='true']/span[1]"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-color='price']/span[1]"
+      },
+      {
+        "Target Name": "Product Image",
+        "Element Type": "class",
+        "Element Identifier": ".s-image",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "Product Details URL",
+        "Element Type": "class",
+        "Element Identifier": "a-link-normal a-text-normal",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".a-pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'a-last', ' ' ))]//a"
+    },
+    "Active Class for current page in Pagination": "a-selected",
+    "Disabled Class for last page in Pagination": "a-disabled",
+    "Should Limit Paging? (Yes/ No)": "no",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "yes",
+    "Detailed Information Page": {
+      "Target Name for Input URLs": "Product Details URL",
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Brand Name",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_techSpec_section_1')]//tr[1]//td"
+        },
+        {
+          "Target Name": "Item Weight",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_techSpec_section_1')]//tr[2]//td"
+        },
+        {
+          "Target Name": "Model Number",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_techSpec_section_1')]//tr[4]//td"
+        },
+        {
+          "Target Name": "Manufacturer Part #",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_techSpec_section_1')]//tr[7]//td"
+        },
+        {
+          "Target Name": "ASIN",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_detailBullets_sections1')]//tr[1]//td"
+        },
+        {
+          "Target Name": "Customer Reviews",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDetails_detailBullets_sections1')]//*[@id='acrCustomerReviewText']"
+        },
+        {
+          "Target Name": "Product Description",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDescription')]//p"
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  },
+  {
+    "Website Configuration Name": "School_Locator",
+    "Website Info": [],
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 5,
+    "Default Website Configuration": {
+      "Website Name Prefix": "SchoolLocator_",
+      "Website URL": "http://schoolreportcards.in/SRC-New/ReportCard/AllIndiaSRC.aspx",
+      "Target Input": {
+        "Target Name": "school-textbox",
+        "Split # Inputs Into Files": 25,
+        "Input Values": [
+          "33061805704",
+          "33061708302",
+          "33061801703",
+          "33061801701",
+          "33061708803",
+          "33061708801",
+          "33061708202",
+          "33061708104",
+          "33061708101",
+          "33061708001",
+          "33061707902",
+          "33061707901",
+          "33061707202",
+          "33061707201",
+          "33061707004",
+          "33061706801",
+          "33061706601",
+          "33061706201",
+          "33061705301",
+          "33061705001",
+          "33061704602",
+          "33061704002",
+          "33061703002",
+          "33061702702",
+          "33061702502",
+          "33061701701",
+          "33061701602",
+          "33061701101",
+          "33061700903",
+          "33061609302",
+          "33061607502",
+          "33061606701",
+          "33061606501",
+          "33061606202",
+          "33061605702",
+          "33061605401",
+          "33061605103",
+          "33061605101",
+          "33061604802",
+          "33061604103",
+          "33061603902",
+          "33061603102",
+          "33061603001",
+          "33061602401",
+          "33061602202",
+          "33061601912",
+          "33061601904",
+          "33061601903",
+          "33061601801",
+          "33061601602",
+          "33061600901",
+          "33061600602",
+          "33061600503",
+          "33061501602",
+          "33061500501",
+          "33061307902",
+          "33061307901",
+          "33061307703",
+          "33061307601",
+          "33061307303",
+          "33061307202",
+          "33061306902",
+          "33061305402",
+          "33061304502",
+          "33061303802",
+          "33061303402",
+          "33061303302",
+          "33061303203",
+          "33061303202",
+          "33061302903",
+          "33061302802",
+          "33061302702",
+          "33061302201",
+          "33061301501",
+          "33061300702",
+          "33061300606",
+          "33061208502",
+          "33061208401",
+          "33061208303",
+          "33061207103",
+          "33061206402",
+          "33061205003",
+          "33061204302",
+          "33061203904",
+          "33061203601",
+          "33061203503",
+          "33061203502",
+          "33061202001",
+          "33061201301",
+          "33061201202",
+          "33061200901",
+          "33061200301",
+          "33061200102",
+          "33061007202",
+          "33061006102",
+          "33061005402",
+          "33061005102",
+          "33061004401",
+          "33061004202"
+        ]
+      },
+      "Input Info": [
+        {
+          "Target Name": "school-textbox",
+          "Target Type": "input",
+          "Element Type": "id",
+          "Element Identifier": "#txtSearchSchool"
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "Yes",
+    "Search Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[(@id = 'lnkSearchSchool')]//img"
+    },
+    "Does results open in new tab? (Yes/ No)": "Yes",
+    "Products List": {
+      "Element Type": "tagname",
+      "Element Identifier": "html"
+    },
+    "Product": {
+      "Element Type": "tagname",
+      "Element Identifier": "body"
+    },
+    "Details to be scraped are available inside an iFrame? (Yes/ No)": "Yes",
+    "iFrame Element": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@id='ctl00_ContentPlaceHolder1_CRViewReport__UI']//iframe[1]"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "School Code",
+        "Element Type": "id",
+        "Element Identifier": "SCHCD1"
+      },
+      {
+        "Target Name": "School Name",
+        "Element Type": "id",
+        "Element Identifier": "SCHNAME1"
+      },
+      {
+        "Target Name": "ZipCode",
+        "Element Type": "id",
+        "Element Identifier": "PINCD1"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+  },
+  {
+    "Website Configuration Name": "AmazonConfig",
+    "Website Info": [],
+    "Default Website Configuration": {
+      "Website Name Prefix": "AmazonPrinter_",
+      "Website URL": "https://www.amazon.com/",
+      "Website URLs": [
+        "https://www.amazon.com/Brother-Monochrome-HL-L2350DW-Two-Sided-Replenishment/dp/B0763WDSYZ/ref=sr_1_1?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-1",
+        "https://www.amazon.com/Brother-Monochrome-Multifunction-MFCL2710DW-Replenishment/dp/B0763ZCH7K/ref=sr_1_2?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-2",
+        "https://www.amazon.com/HP-LaserJet-Wireless-Replenishment-T6B82A/dp/B073RG8Z72/ref=sr_1_3?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-3",
+        "https://www.amazon.com/Brother-HL-L2300D-Monochrome-Printer-Printing/dp/B00NQ1CLTI/ref=sr_1_4?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-4",
+        "https://www.amazon.com/HP-LaserJet-M426fdw-Double-Sided-Replenishment/dp/B013SKICA8/ref=sr_1_5?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-5",
+        "https://www.amazon.com/Brother-HL-L3210CW-Providing-Wireless-Replenishment/dp/B07FMS1DMX/ref=sr_1_6?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-6",
+        "https://www.amazon.com/Brother-MFC-L8900CDW-Business-Networking-Connectivity/dp/B01BGZSS6U/ref=sr_1_7?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-7",
+        "https://www.amazon.com/Brother-HL-L8360CDW-Networking-Automatic-Replenishment/dp/B06XDSMKLT/ref=sr_1_8?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-8",
+        "https://www.amazon.com/Brother-Monochrome-Multifunction-DCPL2550DW-Replenishment/dp/B0764P8F5J/ref=sr_1_9?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-9",
+        "https://www.amazon.com/Brother-Monochrome-HLL2395DW-Cloud-Based-Replenishment/dp/B0764NWFP8/ref=sr_1_10?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-10",
+        "https://www.amazon.com/Brother-Monochrome-HLL2390DW-Convenient-Replenishment/dp/B0764NWFP9/ref=sr_1_11?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-11",
+        "https://www.amazon.com/Brother-Monochrome-Multifunction-MFC-L5900DW-Replenishment/dp/B01BHSLJGC/ref=sr_1_12?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-12",
+        "https://www.amazon.com/HP-Laserjet-Wireless-Monochrome-Replenishment/dp/B013SKIBXG/ref=sr_1_13?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-13",
+        "https://www.amazon.com/Canon-Color-imageCLASS-MF733Cdw-Wireless/dp/B06Y1MYQWB/ref=sr_1_14?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-14",
+        "https://www.amazon.com/Canon-Color-imageCLASS-MF644Cdw-Wireless/dp/B07QK2KDYC/ref=sr_1_15?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-15",
+        "https://www.amazon.com/Brother-Monochrome-HL-L6200DW-Networking-Replenishment/dp/B01824JTWK/ref=sr_1_16?fst=as%3Aoff&amp;qid=1566543626&amp;rnid=172635&amp;s=computers-intl-ship&amp;sr=1-16"
+      ]
+    },
+    "Products List": {
+      "Element Type": "tagname",
+      "Element Identifier": "body"
+    },
+    "Product": {
+      "Element Type": "id",
+      "Element Identifier": "dp-container"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "BestBuyerName",
+        "Element Type": "id",
+        "Element Identifier": "bylineInfo"
+      },
+      {
+        "Target Name": "Brand Name",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//tr[1]//td"
+      },
+      {
+        "Target Name": "Item Weight",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//tr[2]//td"
+      },
+      {
+        "Target Name": "Model Number",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//tr[4]//td"
+      },
+      {
+        "Target Name": "Manufacturer Part #",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//tr[7]//td"
+      },
+      {
+        "Target Name": "ASIN",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//tr[1]//td"
+      },
+      {
+        "Target Name": "Customer Reviews",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'prodDetails')]//*[@id='acrCustomerReviewText']"
+      },
+      {
+        "Target Name": "Product Description",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@id = 'productDescription')]"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+  },
+  {
+    "Website Configuration Name": "Amazon_Printers",
+    "Website Info": [],
+    "Default Website Configuration": {
+      "Website Name Prefix": "AmazonPrinter_",
+      "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172646&dc&fst=as%3Aoff&qid=1565587785&rnid=172635&ref=sr_nr_n_2",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "SingleURL"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".a-color-base.a-text-normal"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-strike='true']/span[1]"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-color='price']/span[1]"
+      },
+      {
+        "Target Name": "Product Image",
+        "Element Type": "class",
+        "Element Identifier": ".s-image",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "Product Details URL",
+        "Element Type": "class",
+        "Element Identifier": "a-link-normal a-text-normal",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".a-pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'a-last', ' ' ))]//a"
+    },
+    "Active Class for current page in Pagination": "a-selected",
+    "Disabled Class for last page in Pagination": "a-disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 1,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Product Details URL"
+      },
+      "Default Website Configuration": {
+        "Website Name Prefix": "AmazonPrinter_",
+        "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172646&dc&fst=as%3Aoff&qid=1565587785&rnid=172635&ref=sr_nr_n_2",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs"
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "id",
+        "Element Identifier": "dp-container"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "BestBuyerName",
+          "Element Type": "id",
+          "Element Identifier": "bylineInfo"
+        },
+        {
+          "Target Name": "Brand Name",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'brand name')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Item Weight",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'item weight')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Model Number",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'model number')]//following-sibling::*"
+        },
+        {
+          "Target Name": "ASIN",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'asin')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Customer Reviews",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'prodDetails')]//*[contains(text(), 'customer reviews')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Product Description",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@id = 'productDescription')]"
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  },
+
+  {
+    "Website Configuration Name": "Amazon_Printers",
+    "Waiting Time After Page Load (in seconds)": 5,
+    "Should Set Browser Cookie? (Yes/ No)": "Yes",
+    "Captcha": null, //TODO
+    "Default Website Configuration": {
+      "Website Name Prefix": "AmazonPrinter_",
+      "Website URL": "https://www.amazon.com/s?i=computers-intl-ship&bbn=16225007011&rh=n%3A16225007011%2Cn%3A172635%2Cn%3A172648&dc&fst=as%3Aoff&qid=1565351192&rnid=172635&ref=sr_pg_1",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "SingleURL"
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".s-result-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".a-color-base.a-text-normal"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-strike='true']/span[1]"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@data-a-color='price']/span[1]"
+      },
+      {
+        "Target Name": "Product Image",
+        "Element Type": "class",
+        "Element Identifier": ".s-image",
+        "Attribute Name (src / href / data-)": "src"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "a-link-normal a-text-normal",
+        "Attribute Name (src / href / data-)": "href"
+      },
+      {
+        "Target Name": "ASIN",
+        "Element Type": "xpath",
+        "Element Identifier": ".//*[data-asin]",
+        "Attribute Name (src / href / data-)": "data-asin"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": ".a-pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'a-last', ' ' ))]//a"
+    },
+    "Active Class for current page in Pagination": "a-selected",
+    "Disabled Class for last page in Pagination": "a-disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 3,
+
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+
+]

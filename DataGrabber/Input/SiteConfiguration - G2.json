@@ -1,0 +1,185 @@
+﻿[
+  {
+    "Website Configuration Name": "G2Config",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Should Set Browser Cookie? (Yes/ No)": "Yes",
+    "Default Website Configuration": {
+      "Website Name Prefix": "G2_IT_Infrastructure",
+      "Website URL": "https://www.google.com/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.g2.com/categories/enterprise-it-management-suites",
+        "https://www.g2.com/categories/mobile-device-management-mdm"
+      ]
+    },
+    "Products List": {
+      "Element Type": "id",
+      "Element Identifier": "product-list"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".paper.pt-half.pb-0.my-1"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Company Name",
+        "Element Type": "class",
+        "Element Identifier": "product-listing__product-name"
+      },
+      {
+        "Target Name": "Overall Rating",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@class = 'c-midnight-90')]//span[1]"
+      },
+      {
+        "Target Name": "Review Count",
+        "Element Type": "class",
+        "Element Identifier": "px-4th"
+      },
+      {
+        "Target Name": "Company Details URL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[(@class = 'product-listing__title')]//a[1]",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "pagination text-center branded-pagination"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='pagination__named-link' and contains(text(), 'Next')]"
+    },
+    "Active Class for current page in Pagination": "selected",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 1,
+    "Should Fetch Data from Details Page? (Yes/ No)": "Yes",
+
+
+    "Detailed Information Page": {
+      "Target Name for Input URLs": {
+        "Target Name": "Company Details URL"
+      },
+      "Waiting Time After Page Load (in seconds)": 3,
+      "Should Set Browser Cookie? (Yes/ No)": "Yes",
+      "Default Website Configuration": {
+        "Website Name Prefix": "G2_",
+        "Website URL": "https://google.com",
+        "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs"
+      },
+      "Products List": {
+        "Element Type": "tagname",
+        "Element Identifier": "body"
+      },
+      "Product": {
+        "Element Type": "class",
+        "Element Identifier": "off-canvas-wrapper"
+      },
+      "Details to be scraped (Class, ID, TagName, XPath)": [
+        {
+          "Target Name": "Category Name",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[@class='page']//li[2]/a/span"
+        },
+        {
+          "Target Name": "Company Description",
+          "Element Type": "class",
+          "Element Identifier": "p-1 mb-0"
+        },
+        {
+          "Target Name": "Exact Review Count",
+          "Element Type": "class",
+          "Element Identifier": "list--piped__li"
+        },
+        {
+          "Target Name": "Company Profile Provided by",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'provided by:')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Company CRM Website",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'titled-section__content m-0 d-f--large-up p-1 pb-half c-midnight-80')]//*[contains(text(), 'website')]//following-sibling::*//a",
+          "Attribute Name (src / href / data-)": "href"
+        },
+        {
+          "Target Name": "Languages Supported",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'titled-section__content m-0 d-f--large-up p-1 pb-half c-midnight-80')]//*[contains(text(), 'Languages Supported')]//parent::*//following-sibling::*"
+        },
+        {
+          "Target Name": "How do you position yourself against your competitors?",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'how do you position yourself against your competitors?')]//following-sibling::*"
+        },
+        {
+          "Target Name": "Vendor",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'vendor')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Description",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'description')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Company Website",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'company website')]//following-sibling::*[1]/a",
+          "Attribute Name (src / href / data-)": "href"
+        },
+        {
+          "Target Name": "Year Founded",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'year founded')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Total Revenue (USD mm)",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'total revenue (usd mm)')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "HQ Location",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'hq location')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Phone",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'phone')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Ownership",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'ownership')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "LinkedIn Page",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'linkedin')]//following-sibling::*[1]/a",
+          "Attribute Name (src / href / data-)": "href"
+        },
+        {
+          "Target Name": "Employees on LinkedIn",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'employees on linkedin')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Twitter Handle",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'twitter')]//following-sibling::*[1]"
+        },
+        {
+          "Target Name": "Twitter Followers Count",
+          "Element Type": "xpath",
+          "Element Identifier": "//*[(@class = 'paper paper--box paper-white')]//*[contains(text(), 'twitter followers')]//following-sibling::*[1]"
+        }
+      ],
+      "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging"
+    }
+  }
+]

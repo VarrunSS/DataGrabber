@@ -1,0 +1,91 @@
+﻿[
+  {
+    "Website Configuration Name": "CommVaultConfig",
+    "Does Website Require Input Values? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 10,
+    "Should Set Browser Cookie? (Yes/ No)": "No",
+    "Default Website Configuration": {
+      "Website Name Prefix": "CommVault_",
+      "Website URL": "https://learn.commvault.com/partners/find",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleInputs",
+      "Target Name": "country-dropdown",
+      "Input Values": [
+        "United States"
+      ],
+      "Input Info": [
+        {
+          "Target Name": "country-dropdown",
+          "Target Type": "select",
+          "Element Type": "id",
+          "Element Identifier": "country",
+          "Value": ""
+        }
+      ]
+    },
+    "Does it have 'Search' button to get results? (Yes/ No)": "No",
+    "Products List": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[(@id = 'mktResults')]//*[@class='row']"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "mktPartnerDetail"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Company Name",
+        "Element Type": "class",
+        "Element Identifier": "mktpartnerdetailheader"
+      },
+      {
+        "Target Name": "Reseller Countries",
+        "Element Type": "xpath",
+        "Element Identifier": ".//text()[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'resell countries:')]//parent::*//following-sibling::text()[1]"
+      },
+      {
+        "Target Name": "Country",
+        "Element Type": "xpath",
+        "Element Identifier": ".//text()[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'country:')]//parent::*//following-sibling::*"
+      },
+      {
+        "Target Name": "Phone",
+        "Element Type": "xpath",
+        "Element Identifier": ".//text()[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'phone:')]//parent::*//following-sibling::text()[1]"
+      },
+      {
+        "Target Name": "Website URL",
+        "Element Type": "tagname",
+        "Element Identifier": "a",
+        "Attribute Name (src / href / data-)": "href"
+      },
+      {
+        "Target Name": "Badge",
+        "Element Type": "class",
+        "Element Identifier": "badge-div",
+        "Get Child Element? (Yes/ No)": "Yes",
+        "Child Node": {
+          "Target Name": "sub-elements",
+          "Element Type": "tagname",
+          "Element Identifier": "img",
+          "Separator": "|||",
+          "Attribute Name (src / href / data-)": "src",
+          "Remove Text": "https://learn.commvault.com/-/media/Images/Content/Partners/Find%20a%20Partner/Reseller/Badges/"
+        }
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnShowMore",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "partner-pagination"
+    },
+    "Active Class for current page in Pagination": "active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Load More Button": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='glyphicon glyphicon-chevron-right']/parent::*/parent::*"
+    },
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 3,
+    "Should Fetch Data from Details Page? (Yes/ No)": "No"
+  }
+]

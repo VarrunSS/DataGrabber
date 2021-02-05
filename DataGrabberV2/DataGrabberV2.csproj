@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Log\**" />
+    <Compile Remove="Output\**" />
+    <EmbeddedResource Remove="Log\**" />
+    <EmbeddedResource Remove="Output\**" />
+    <None Remove="Log\**" />
+    <None Remove="Output\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Dependency\chromedriver.exe" />
+    <None Remove="Dependency\EPPlus.dll" />
+    <None Remove="Dependency\HtmlAgilityPack.dll" />
+    <None Remove="Template\Scraper_MailTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Dependency\chromedriver.exe" />
+    <Content Include="Dependency\EPPlus.dll" />
+    <Content Include="Dependency\HtmlAgilityPack.dll" />
+    <Content Include="Template\Scraper_MailTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="15.0.5" />
+    <PackageReference Include="EPPlus" Version="5.1.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.23" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="85.0.4183.8700" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.112.2" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataGrabberV2.LogWriter\DataGrabberV2.LogWriter.csproj" />
+    <ProjectReference Include="..\DataGrabberV2.Models\DataGrabberV2.Models.csproj" />
+    <ProjectReference Include="..\DataGrabberV2.Utility\DataGrabberV2.Utility.csproj" />
+    <ProjectReference Include="..\GoogleRecaptchaV2\GoogleRecaptchaV2.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

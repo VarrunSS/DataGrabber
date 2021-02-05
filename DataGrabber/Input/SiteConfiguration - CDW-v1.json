@@ -1,0 +1,106 @@
+﻿[
+  {
+    "Website Configuration Name": "CDW_Full_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Does Website Require Input Values? (Yes/ No)": "No",
+    "Should Disable JavaScript in Browser? (Yes/ No)": "Yes",
+    "Waiting Time After Page Load (in seconds)": 0,
+    "Default Website Configuration": {
+      "Website Name Prefix": "CDW_Full_",
+      "Website URL": "https://www.google.com",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.cdw.com/search/Cables/?w=B&maxrecords=24",
+        "https://www.cdw.com/search/Computer-Accessories/?w=A&maxrecords=24",
+        "https://www.cdw.com/search/Computers/?w=C&maxrecords=24",
+        "https://www.cdw.com/search/Data-Storage-Products/?w=T&maxrecords=24",
+        "https://www.cdw.com/search/Electronics/?w=E&maxrecords=24",
+        "https://www.cdw.com/search/Memory/?w=M&maxrecords=24",
+        "https://www.cdw.com/search/Monitors-Projectors/?w=D&maxrecords=24",
+        "https://www.cdw.com/search/Networking-Products/?w=N&maxrecords=24",
+        "https://www.cdw.com/search/Office-Equipment-Supplies/?w=O&maxrecords=24",
+        "https://www.cdw.com/search/Phones-Video-Conferencing/?w=H&maxrecords=24",
+        "https://www.cdw.com/search/Power-Cooling-Racks/?w=W&maxrecords=24",
+        "https://www.cdw.com/search/Printers-Scanners-Print-Supplies/?w=P&maxrecords=24",
+        "https://www.cdw.com/search/Servers-Server-Management/?w=S&maxrecords=24"
+      ]
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": "search-main"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".search-result"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": ".search-result-product-url"
+      },
+      {
+        "Target Name": "Category",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='breadcrumbs']//li[last()]/a",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Manufacture Part #",
+        "Element Type": "class",
+        "Element Identifier": "mfg-code",
+        "Remove Text": "MFG#: "
+      },
+      {
+        "Target Name": "CDW Part #",
+        "Element Type": "class",
+        "Element Identifier": "cdw-code",
+        "Remove Text": "CDW#: "
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": "price-msrp single"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "class",
+        "Element Identifier": "price-type-price"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "class",
+        "Element Identifier": "search-result-product-url",
+        "Attribute Name (src / href / data-)": "href"
+      },
+      {
+        "Target Name": "TotalPages",
+        "Element Type": "class",
+        "Element Identifier": ".search-pagination-range",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "search-pagination-list-container"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "xpath",
+      "Element Identifier": "//*[@class='ico-chevron-right-thin']//parent::*"
+    },
+    "Active Class for current page in Pagination": "search-pagination-active",
+    "Disabled Class for last page in Pagination": "disabled",
+    "Should Limit Paging? (Yes/ No)": "Yes",
+    "Paging Limit": 1,
+
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

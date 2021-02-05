@@ -1,0 +1,79 @@
+﻿[
+  {
+    "Website Configuration Name": "Ingrammicro_DE_Full_Config",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "RestClient",
+    "Default Website Configuration": {
+      "Website Name Prefix": "Ingrammicro_DE_",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website Pattern Configuration": {
+        "HTTP Verb": "POST",
+        "Current Page": 1,
+        "Items Per Page": 100,
+        "Pattern Settings": [
+          {
+            "Url Pattern": "https://de.ingrammicro.com/Site/Search/DoSearch",
+            "Total Items": 100,
+            "Request Body": [
+              {
+                "Param Name": "Mode",
+                "Value": "12"
+              },
+              {
+                "Param Name": "Term",
+                "Value": "{CurrentPage}"
+              },
+              {
+                "Param Name": "RecordPerPage",
+                "Value": "80"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Products List": {
+      "Element Type": "class",
+      "Element Identifier": ".grid-column"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": ".grid-column-item"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "product-name"
+      },
+      {
+        "Target Name": "VPN",
+        "Element Type": "class",
+        "Element Identifier": "vpn",
+        "Remove Text": "VPN:"
+      },
+      {
+        "Target Name": "SKU",
+        "Element Type": "class",
+        "Element Identifier": "sku",
+        "Remove Text": "SKU:"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "tagname",
+        "Element Identifier": "a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "NoPaging",
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 5,
+
+    "Should send mail attached with output file ? (Yes/ No)": "No",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

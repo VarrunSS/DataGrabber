@@ -1,0 +1,96 @@
+﻿[
+  {
+    "Website Configuration Name": "InsightConfig",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Does Website Require Input Values? (Yes/ No)": "No",
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Waiting Time After Page Load (in seconds)": 3,
+    "Default Website Configuration": {
+      "Website Name Prefix": "Insight_",
+      "Website URL": "https://www.google.com/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.insight.com/en_US/shop/category/tablets/store.html?pq=%7B%22pageSize%22%3A100%2C%22currentPage%22%3A1%2C%22shownFlag%22%3Atrue%2C%22priceRangeLower%22%3A0%2C%22priceRangeUpper%22%3A0%2C%22cmtStandards%22%3Atrue%2C%22categoryId%22%3Anull%2C%22setType%22%3Anull%2C%22setId%22%3Anull%2C%22shared%22%3Anull%2C%22groupId%22%3Anull%2C%22cmtCustomerNumber%22%3Anull%2C%22groupName%22%3Anull%2C%22fromLicense%22%3Atrue%2C%22licenseContractIds%22%3Anull%2C%22programIds%22%3Anull%2C%22controller%22%3Anull%2C%22fromcs%22%3Afalse%2C%22searchTerms%22%3A%7B%22Tablets%22%3A%7B%22field%22%3A%22productSet%22%2C%22value%22%3A%22VC-Tablet%22%7D%7D%2C%22sortBy%22%3A%22BestMatch%22%7D",
+        "https://www.insight.com/en_US/shop/category/power-management/store.html?pq=%7B%22pageSize%22%3A100%2C%22currentPage%22%3A1%2C%22shownFlag%22%3Atrue%2C%22priceRangeLower%22%3A0%2C%22priceRangeUpper%22%3A0%2C%22cmtStandards%22%3Atrue%2C%22categoryId%22%3Anull%2C%22setType%22%3Anull%2C%22setId%22%3Anull%2C%22shared%22%3Anull%2C%22groupId%22%3Anull%2C%22cmtCustomerNumber%22%3Anull%2C%22groupName%22%3Anull%2C%22fromLicense%22%3Atrue%2C%22licenseContractIds%22%3Anull%2C%22programIds%22%3Anull%2C%22controller%22%3Anull%2C%22fromcs%22%3Afalse%2C%22searchTerms%22%3A%7B%22Power%20Management%22%3A%7B%22field%22%3A%22productSet%22%2C%22value%22%3A%22VC-PowerProtect%22%7D%7D%2C%22sortBy%22%3A%22BestMatch%22%7D"
+      ]
+    },
+    "Products List": {
+      "Element Type": "id",
+      "Element Identifier": "js-search-product-items"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "result-item-list"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Title",
+        "Element Type": "XPath",
+        "Element Identifier": "//h3//a"
+      },
+      {
+        "Target Name": "Category",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@id='content']//h1",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Manufacture Part #",
+        "Element Type": "class",
+        "Element Identifier": "prod-part-number",
+        "Remove Text": ""
+      },
+      {
+        "Target Name": "Insight Part #",
+        "Element Type": "class",
+        "Element Identifier": "prod-part-number",
+        "Remove Text": ""
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "class",
+        "Element Identifier": "prod-price",
+        "Remove Text": "USD"
+      },
+      {
+        "Target Name": "Description",
+        "Element Type": "class",
+        "Element Identifier": "product-description"
+      },
+      {
+        "Target Name": "ProductStock",
+        "Element Type": "class",
+        "Element Identifier": "prod-stock"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "xpath",
+        "Element Identifier": "//h3//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnClick",
+    "Pagination Container": {
+      "Element Type": "class",
+      "Element Identifier": "pagination-container"
+    },
+    "Does it have 'Next' button in Pagination? (Yes/ No)": "Yes",
+    "Next Button in Pagination": {
+      "Element Type": "class",
+      "Element Identifier": "nav-page__next-page nav-page__desktop"
+    },
+    "Waiting Time After Page Click (in seconds)": 2,
+    "Active Class for current page in Pagination": "nav-page__current-page",
+    "Disabled Class for last page in Pagination": "nav-page__last-page",
+    "Should Limit Paging? (Yes/ No)": "No",
+    "Paging Limit": 2,
+
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]

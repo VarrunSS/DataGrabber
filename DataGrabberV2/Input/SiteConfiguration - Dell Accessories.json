@@ -1,0 +1,76 @@
+﻿[
+  {
+    "Website Configuration Name": "Dell_PcAccessories_Config",
+    "Waiting Time After Page Load (in seconds)": 0,
+    "Should Disable JavaScript in Browser? (Yes/ No)": "No",
+    "Should Rotate Proxy IP? (Yes/ No)": "No",
+    "Should Set Browser Width & Height? (Yes/ No)": "Yes",
+    "Browser Dimension": {
+      "Width": 450,
+      "Height": 1000
+    },
+    "Scraping Mechanism (Selenium, RestClient)": "Selenium",
+    "Default Website Configuration": {
+      "Website Name Prefix": "Dell_PcAccessories_",
+      "Website URL": "https://www.google.com/",
+      "Webscrape Type (SingleURL, MultipleURLs, MultipleInputs)": "MultipleURLs",
+      "Website URLs": [
+        "https://www.dell.com/en-us/shop/pc-accessories/ar/5436?appliedRefinements=27592",
+        "https://www.dell.com/en-us/shop/speakers/ar/8311"
+      ]
+    },
+    "Products List": {
+      "Element Type": "id",
+      "Element Identifier": "ProductStackContainer"
+    },
+    "Product": {
+      "Element Type": "class",
+      "Element Identifier": "product-stack-row"
+    },
+    "Details to be scraped (Class, ID, TagName, XPath)": [
+      {
+        "Target Name": "Category",
+        "Element Type": "id",
+        "Element Identifier": "sharedPdPageProductTitle",
+        "Should Check Element In Body? (Yes/ No)": "Yes"
+      },
+      {
+        "Target Name": "Title",
+        "Element Type": "class",
+        "Element Identifier": "text-blue fast-delivery-text-link"
+      },
+      {
+        "Target Name": "Manufacturer",
+        "Element Type": "class",
+        "Element Identifier": "manufacturer"
+      },
+      {
+        "Target Name": "MRP",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='ps-simple-price']//*[@class='strikethrough normal-font-size']"
+      },
+      {
+        "Target Name": "Discount Price",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='ps-simple-price']//*[@class='force-strong']"
+      },
+      {
+        "Target Name": "ProductDetailsURL",
+        "Element Type": "xpath",
+        "Element Identifier": "//*[@class='ps-title']//a",
+        "Attribute Name (src / href / data-)": "href"
+      }
+    ],
+    "Paging Type (NoPaging, LoadOnClick, LoadOnShowMore, LoadOnScroll)": "LoadOnShowMore",
+    "Load More Button": {
+      "Element Type": "class",
+      "Element Identifier": "load-more-button"
+    },
+    "Should send mail attached with output file ? (Yes/ No)": "Yes",
+    "Mail Information": {
+      "Mail To Address": "varrun.selvam@ingrammicro.com",
+      "Mail CC Address": "",
+      "Mail BCC Address": ""
+    }
+  }
+]
